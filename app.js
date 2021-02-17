@@ -1,30 +1,28 @@
-// const App = Vue.CreateApp({
-//     data() {
-//         return {
-//             myname : 'chinar',
-//             Age:35
-//         };
-//     }
-//     });
-// App.mount('#assignment');
+new  Vue({
+    el:"#assignment",
 
-new Vue({
-    el: "#assignment",
-    data() {
-        return {
-            name : 'chinar',
-            Age: 16,
-            VueLink: './mountain.jpeg'
-            
+    data(){
+        return{
+            Message:'Hello World!!',
+            name:'',
+            confirmedName:''
+
         }
-    },   
-
-    methods:
-    {
-        generateRandom()
+    },
+        methods:
         {
-            const num = Math.random();
-            return num;
+            showMessage()
+            {
+                alert(this.Message);
+            },
+            populateName(event)
+            {
+                this.name=event.target.value;
+            },
+            populateconfirmedName(event)
+            {
+                this.confirmedName=event.target.value;
+            }
         }
-    }
-});
+    });
+
